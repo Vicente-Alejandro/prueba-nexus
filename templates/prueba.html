@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Dashboard</title>
+</head>
+<body>
+    <h1>Este es el dashboard</h1>
+
+    {% if id is defined %}
+        <p>Este es el id otorgado: {{ id }}</p>
+    {% else %}
+        <p>Puedes escoger entre estos IDs, rockero:</p>
+
+        <ul>
+            {% for i in 1..10 %}
+                <li>
+                    <a href="/inicio/prueba/{{ i }}">Id número {{ i }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
